@@ -1,0 +1,22 @@
+{ 
+    "car" : 
+      { 
+         "color" : "red",
+         "model" : "2013"
+      },
+     "motorcycle": 
+      { 
+         "color" : "red",
+         "model" : "2016"
+      },
+     "bicycles": [
+      { 
+         "color" : "red",
+         "model" : "2011"
+      },
+      { 
+        "color" : "blue",
+        "model" : "2018"
+     }
+    ]
+  }

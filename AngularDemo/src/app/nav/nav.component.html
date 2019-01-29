@@ -1,0 +1,22 @@
+<header>
+
+  <div class="container">
+    <div>
+      <a class="toggleNavBtn" (click)="barToggle()">
+          <i class="fa fa-bars"></i>
+      </a> 
+    <a routerLink="/" class="logo">{{ appTitle }}</a>
+    </div>
+    <nav class="topnav" [class.responsive]="isResponsive">
+      <ul>
+        <li class="underbar"><a routerLink="/">Home</a></li>
+        <li class="underbar"><a routerLink="/data">News</a></li>
+        <li class="underbar"><a routerLink="/contact">Contact</a></li>
+        <li class="underbar"><a routerLink="/about">About</a></li>
+
+      </ul>
+        
+  </nav>
+  
+</div>
+</header>

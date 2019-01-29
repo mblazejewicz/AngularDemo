@@ -1,0 +1,37 @@
+<h1 [class.gray]="h1Style">Home</h1>
+
+<h1 [ngClass]="{
+  'gray': h1Style,
+  'large': !h1Style
+}">HomeOther</h1>
+
+<h1 [ngStyle]="{
+  'color': h1Style ? 'gray' : 'black',
+  'font-size': !h1Style ? '1em' : '1.4em'
+}">Home</h1>
+
+<span>You clicked {{clickCount}}</span>
+<br>
+<button (click)="firstClick()">Click me</button>
+<br>
+
+<h1>Users local</h1>
+
+<ul *ngIf="userData">
+  <li *ngFor="let user of userData"> 
+    <input readonly="true" type="checkbox" [checked]="user.isAvailable" onClick="return false;">
+    <span title={{user.address}}>{{ user.name }} {{ user.age }}</span>
+  </li>
+</ul>
+
+<h1>Remote Users</h1>
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users">
+    <img appLazyLoad [src]="user.avatar">
+    <p>{{ user.name }} {{ user.age }} 
+      <input readonly="true" type="checkbox" [checked]="user.isAvailable" onClick="return false;">
+      {{ user.isAvailable }} 
+    </p>
+  </li>
+</ul>

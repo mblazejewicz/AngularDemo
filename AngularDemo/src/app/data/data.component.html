@@ -1,0 +1,12 @@
+
+<ul *ngIf="users">
+  <li *ngFor="let item of users"> {{item.name}} {{item.lastName}}</li>
+</ul>
+
+ <ul *ngIf="transport.bicycles"> Bicycles
+      <li *ngFor="let sub of transport.bicycles"> {{ sub | json}}</li>
+    </ul>
+
+    <ul> Car
+        <li> {{ transport.car | json}}</li>
+      </ul>

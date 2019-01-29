@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.3em;
+    display: grid;
+    grid-template-columns: 30% auto;
+
+    a {
+        color: white;
+    }
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+// from http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+.underbar{
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: rgb(108, 161, 182);
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    &:hover {
+      color: rgb(52, 111, 134);
+
+      &::before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+}
+
+img {
+    box-shadow: 3px 2px 2px 0px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 250px;
+    height: 250px;
+  }
